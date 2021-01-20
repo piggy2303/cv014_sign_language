@@ -13,6 +13,8 @@ RUN pip install gevent
 # RUN pip install scikit-image==0.14.2
 # RUN pip install scipy
 RUN pip install googledrivedownloader
+RUN pip install fastai==2.1.7
+
 
 ADD . /app
 WORKDIR /app
