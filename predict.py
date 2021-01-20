@@ -1,4 +1,4 @@
-import argparse
+# import argparse
 from fastai.vision.all import *
 
 
@@ -38,11 +38,9 @@ def np_to_base64(data):
 def cv014(data_input):
     source = base64_to_file(data_input)
 
-    learn_inf = load_learner("sign_alphabet_export_201128.pkl")
+    learn_inf = load_learner("models/sign_alphabet_export_201128.pkl")
     pred, pred_idx, probs = learn_inf.predict(source)
     detail = (f'{probs[pred_idx]:.04f}')
-
-    print(detail)
 
     result = {
         "prediction": pred,
